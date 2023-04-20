@@ -1,0 +1,58 @@
+<!--To delete multiple rows-->
+
+<!--Checkbox-->
+
+<!--Button to delete multiple records-->
+<input class="delete_multiple" type="submit" name="delete_multiple" value="Delete all selected">
+
+<!-- Styling for buttons
+    /*Deleting multiple records button styling and position*/
+  .delete_multiple {
+    background-color: #eae7e1;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #f76c5e;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    color: #f76c5e;
+    cursor: pointer;
+    position: relative;
+    top: 150px;
+  }
+
+  .delete_multiple:hover {
+    text-decoration: none;
+    color: #232322;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+-->
+
+<!--First row of table (line 36 is comment for final project)-->
+<!--Allows users to check each row of the table-->
+<td><input type="checkbox" name="delete_multiple_chckbx" class="select" value="<?php echo $row['customer_id']; ?>"></td>
+
+<!--Form to POST customer_id(line 40 is comment for final project)-->
+<!--Posting form to own page for deleting multiple records-->
+<form>
+    <input type="hidden" name="delete_multiple_id" value="<?php echo $row['customer_id']; ?>" />
+</form>
+
+<!--PHP
+<?php 
+    if (isset($_POST['delete_multiple'])) {
+        $grabchckbx = $_POST['delete_multiple_chckbx'];
+        foreach($grabchckbx as $deletemultipleid) {
+            mysqli_query($connectdb, "DELETE FROM `customers` WHERE `customers`.`customer_id` =".$deletemultipleid);
+        }
+        echo "<div class='alert alert-good'>
+        <span class='closebtn' onclick='location.reload()' onclick='this.parentElement.style.display=`none`;'>&times
+        </span>Customers deleted successfully!
+      </div>";
+    }
+?>
+-->

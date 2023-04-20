@@ -1,0 +1,415 @@
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box 
+  }
+  /*Font styling for system*/
+  body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #eae7e1;
+  }
+  /*product scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eae7e1;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232322;
+  }
+  /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Navbar XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+  header {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: #586ba4;
+  }
+  .logo-container, .navbar-links, .logout {
+    display: flex;
+  }
+  .logo-container {
+    flex: 1;
+    padding-left: 5px;
+    position: relative;
+  }
+  nav {
+    flex: 2;
+  }
+  /*Spacing around navbar links for even look*/
+  .navbar-links {
+    justify-content: space-around;
+    list-style: none;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  /*Each page has their corresponding name in the navbar highlighted for ease of use*/
+  .navbar-linkp {
+    text-decoration: none;
+    color: white;
+  }
+  .navbar-linkh, .navbar-links, .navbar-linkc, .navbar-linko {
+    text-decoration: none;
+    color: black;
+  }
+  .navbar-links, .navbar-linkp, .navbar-linkc, .navbar-linko {
+    padding-left: 55px;
+  }
+  .navbar-linkh:hover, .navbar-links:hover, .navbar-linkp:hover, .navbar-linkc:hover, .navbar-linko:hover {
+    color: #FAF0DE;
+    transition: 0.5s;
+  }
+  /*Dropdown menu*/
+  .dropbtn {
+    padding: 7px 12px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    font-family: inherit;
+    color: #ffffff;
+    background-color: #232322;
+    border-color: #eae7e1;
+  }
+  .dropbtn:hover, .dropbtn:focus {
+    color: #ffffff;
+    background-color: #232322;
+    border-color: #eae7e1;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    right: 13px;
+  }
+  .dropdown-content a {
+    color: #424242;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .empty{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    line-height: 0;
+  }
+  .dropdown a:hover {
+   background-color: #f1f1f1
+  }
+  .dropdown_dropicon {
+    height: 16px;
+    width: 10px;
+    position: relative;
+    right: 5px;
+    top: 3px;
+  }
+  .show {
+    display: block;
+  }
+  .logout {
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 13px;
+  }
+  .name {
+    color: #232322;
+    font-size: 45px;
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .namedef {
+    padding-top: 80px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logoutbut {
+    background-color: white;
+    color: #232322;
+    padding: 6px 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0px;
+  }
+  .logoutbut:hover {
+    background-color: #f1f1f1;
+    padding: 5px;
+    padding: 6px 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor:pointer;
+  }
+  /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Table XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+  .product_table {
+    border-collapse:collapse;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 75px;
+    font-size: 18px;
+    width: 100%;
+  }
+  /*Styling for table*/
+  .product_table thead tr {
+    background-color: #586ba4;
+    text-align: left;
+  }
+  .product_table th {
+    color: white;
+  }
+  .product_table th, .product_table td {
+    padding: 12px 15px;
+  }
+  .product_table tbody tr {
+    border: 0.5px solid #586ba4;
+  }
+  .button a {
+    text-decoration: none;
+    color: #232322;
+  }
+  /*Positioning of table*/
+  .table_container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*Search bar styling*/
+  #myInput {
+    width: 30%;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ddd;
+  }
+  .search {
+    justify-content: flex-start;
+    position: relative;
+    top: 60px;
+    left: 5px;
+  }
+  /*Styling for buttons inside the table*/
+  /*Edit button*/
+  .edit_record {
+    background-color: #eae7e1;
+    color:#324376;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #324376;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+  }
+  .edit_record:hover {
+    color:#232322;
+    transition: 0.5s;
+  }
+  /*Edit record popup submit button*/
+  .edit_submit_button {
+    background-color: white;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+  }
+  /*Delete button*/
+  .delete {
+    background-color: #eae7e1;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #f76c5e;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    color: #f76c5e;
+    cursor: pointer;
+  }
+  .delete:hover {
+    text-decoration: none;
+    color: #232322;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  /*New record button styling*/
+  .new_record {
+    color: #586ba4;
+    background-color: #eae7e1;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #586ba4;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 1097px;
+    cursor: pointer;
+  }
+  .new_record:hover {
+    color: black;
+    transition: 0.5s;
+  }
+  .new_record_icon {
+    position: relative;
+    top: 2px;
+    right: -3px;
+    height: 16px;
+    width: 14px;
+  }
+  /*New record popup submit button*/
+  .new_record_submit {
+    background-color: white;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+  }
+  /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Modal Popup XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+  /* The Modal popup background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  /* Modal popup content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 5px;
+  }
+  /* The close button for Modal popup */
+  .close, .closetwo {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #232322;
+    text-align: center;
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+    cursor: pointer;
+  }
+  .close:hover, .closetwo:hover {
+    color: #586ba4;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .record_success {
+    text-align: center;
+    top: 50px;
+  }
+
+  input.prod_description {
+    width: 80%;
+  }
+  /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Alerts XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+  /* The alert message box */
+  .alert {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    margin-bottom: 15px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+  }
+  .alert-good {
+    background-color: #324376;
+  }
+  .alert-bad {
+    background-color: #f76c5e;
+  }
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .closebtn:hover {
+    color: black;
+  }
+  /*Styling for button to return user to the top of the page*/
+  .gotopbtn {
+    position: fixed;
+    white-space: nowrap;
+    text-align: center;
+    right: 10px;
+    bottom: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #232322;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #232322;
+    border-radius: 5px;
+  }
+  .gotopbtn:hover {
+    color: #586ba4;
+    border: 2px solid #586ba4;
+    transition: 0.5s;
+  }
+  /* Media queries */
+  @media only screen and (max-width: 1256px) {
+    .navbar-linkp, .navbar-linkb, .navbar-linka {
+        padding-left: 55px;
+        border-left: solid 0px #FAF0DE;
+   }
+  }
+  @media only screen and (max-width: 620px) {
+    .logout {
+        display: none;
+   }
+  }
+  
